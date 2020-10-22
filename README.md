@@ -25,5 +25,5 @@ Since version 0.9.2 I am already making independent changes without following th
 
 ## Install notes
 
-1. In Obsidian app settings, select the "custom ccc" option in the "appearance" section: ![custom-css](https://github.com/ryjjin/Obsidian-Dark-Graphite-Pie-theme/blob/main/Custom-CSS-option.png)
+1. In Obsidian app settings, select the "custom CSS" option in the "appearance" section: ![custom-css](https://github.com/ryjjin/Obsidian-Dark-Graphite-Pie-theme/blob/main/Custom-CSS-option.png)
 2. Download obsidian.css and put it to your Obsidian vault folder (or choose theme via plugin "Community themes" in Obsidian app)
