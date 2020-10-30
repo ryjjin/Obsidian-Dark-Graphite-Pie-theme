@@ -2059,3 +2059,7 @@ div.prompt-results {
   color: var(--text-faint);
 }
 
+div.community-plugin-readme.markdown-preview-view {
+  color: var(--text-faint);
+}
+
