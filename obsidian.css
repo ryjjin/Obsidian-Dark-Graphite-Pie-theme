@@ -204,7 +204,8 @@ body {
 .nav-file.is-active > .nav-folder-collapse-indicator, 
 .nav-folder.is-active > .nav-file-title, 
 .nav-folder.is-active > .nav-folder-title, 
-.nav-folder.is-active > .nav-folder-collapse-indicator {
+.nav-folder.is-active > .nav-folder-collapse-indicator,
+.nav-file-title.is-active {
   background-color: var(--background-nav-selected);
   color: var(--text-nav-selected);
 }
