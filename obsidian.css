@@ -199,15 +199,26 @@ body {
 }
 
 /* Background and text color of selected item in left nav tree */
-.nav-file.is-active > .nav-file-title, 
+
+/*.nav-file.is-active > .nav-file-title, 
 .nav-file.is-active > .nav-folder-title, 
 .nav-file.is-active > .nav-folder-collapse-indicator, 
 .nav-folder.is-active > .nav-file-title, 
 .nav-folder.is-active > .nav-folder-title, 
 .nav-folder.is-active > .nav-folder-collapse-indicator,
-.nav-file-title.is-active {
+.nav-file-title.is-inactive,
+.nav-file-title.is-active
+
+ {
   background-color: var(--background-nav-selected);
   color: var(--text-nav-selected);
+}*/
+
+.nav-file-title.is-being-dragged,
+.nav-file-title.is-active,
+body:not(.is-grabbing) .nav-file-title.is-active:hover {
+  background-color:var(--background-nav-selected);
+  color:var(--text-nav-selected);
 }
 
 /* Background and text color of selected item in left nav tree - when hovering */
@@ -638,7 +649,7 @@ input[type="number"] {
 .workspace-tabs {
   background-color: var(--background-secondary-alt);
   overflow: hidden;
-  padding: 0px 4px 28px 4px;
+  padding: 0px 4px 4px 4px;
   position: relative;
 }
 .view-header-icon {
