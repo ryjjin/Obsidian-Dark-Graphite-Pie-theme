@@ -1044,7 +1044,7 @@ input[type="number"] {
 /*============bigger link popup preview  ================*/
 
 .popover.hover-popover.is-loaded {
-  position: absolute;
+  position: fixed;
   z-index: var(--layer-popover);
   max-height: 500px; /* was 300 */
   min-height: 100px;
@@ -1060,11 +1060,11 @@ input[type="number"] {
 
 
 /* --- the bottom gradient ---*/
-.popover.hover-popover:after {
+/*.popover.hover-popover:after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 0px; /* 50px */
+  height: 50px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -1075,7 +1075,7 @@ input[type="number"] {
     var(--background-primary)
   );
 }
-
+*/
 /* =========== footnotes ========= */
 
 .markdown-preview-view .mod-highlighted {
