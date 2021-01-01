@@ -228,6 +228,7 @@ body {
 .nav-file-title.is-being-dragged,
 .nav-file-title.is-active,
 div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable:hover,
+div.tag-pane-tag.pane-clickable-item.pane-list-item:hover,
 div.collapsible-item-self.is-clickable:hover,
 .suggestion-item.is-selected,
 body:not(.is-grabbing) .nav-file-title.is-active:hover {
@@ -236,6 +237,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
 }
 
 div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable,
+div.tag-pane-tag.pane-clickable-item.pane-list-item,
 div.collapsible-item-self.is-clickable {
   color:var(--text-nav);
   font-size: 12px;
@@ -245,8 +247,6 @@ div.collapsible-item-self.is-clickable {
   color:var(--text-faint);
   font-size: 14px;
 }
-
-
 
 
 
