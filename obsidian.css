@@ -225,19 +225,9 @@ body {
   color: var(--text-nav-selected);
 }*/
 
-.nav-file-title.is-being-dragged,
-.nav-file-title.is-active,
-div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable:hover,
-div.tag-pane-tag.pane-clickable-item.pane-list-item:hover,
-div.collapsible-item-self.is-clickable:hover,
-.suggestion-item.is-selected,
-body:not(.is-grabbing) .nav-file-title.is-active:hover {
-  background-color:var(--background-nav-selected);
-  color:var(--text-nav-selected);
-}
-
 div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable,
 div.tag-pane-tag.pane-clickable-item.pane-list-item,
+div.tree-item-inner,
 div.collapsible-item-self.is-clickable {
   color:var(--text-nav);
   font-size: 12px;
@@ -246,6 +236,23 @@ div.collapsible-item-self.is-clickable {
 .suggestion-item {
   color:var(--text-faint);
   font-size: 14px;
+}
+
+.nav-file-title.is-being-dragged,
+.nav-file-title.is-active,
+div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable:hover,
+div.tag-pane-tag.pane-clickable-item.pane-list-item:hover,
+div.collapsible-item-self.is-clickable:hover,
+div.tree-item-self.tag-pane-tag.is-clickable:hover,
+div.tree-item-self.is-clickable:hover,
+.suggestion-item.is-selected,
+body:not(.is-grabbing) .nav-file-title.is-active:hover {
+  background-color:var(--background-nav-selected);
+  color:var(--text-nav-selected);
+}
+
+div.tree-item-inner:hover {
+  color:var(--text-nav-selected);
 }
 
 
