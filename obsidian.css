@@ -225,17 +225,10 @@ body {
   color: var(--text-nav-selected);
 }*/
 
-.nav-file-title.is-being-dragged,
-.nav-file-title.is-active,
-div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable:hover,
-div.collapsible-item-self.is-clickable:hover,
-.suggestion-item.is-selected,
-body:not(.is-grabbing) .nav-file-title.is-active:hover {
-  background-color:var(--background-nav-selected);
-  color:var(--text-nav-selected);
-}
 
 div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable,
+div.tag-pane-tag.pane-clickable-item.pane-list-item,
+div.tree-item-inner,
 div.collapsible-item-self.is-clickable {
   color:var(--text-nav);
   font-size: 12px;
@@ -246,8 +239,22 @@ div.collapsible-item-self.is-clickable {
   font-size: 14px;
 }
 
+.nav-file-title.is-being-dragged,
+.nav-file-title.is-active,
+div.collapsible-item-self.tag-pane-tag.pane-list-item.is-clickable:hover,
+div.tag-pane-tag.pane-clickable-item.pane-list-item:hover,
+div.collapsible-item-self.is-clickable:hover,
+div.tree-item-self.tag-pane-tag.is-clickable:hover,
+div.tree-item-self.is-clickable:hover,
+.suggestion-item.is-selected,
+body:not(.is-grabbing) .nav-file-title.is-active:hover {
+  background-color:var(--background-nav-selected);
+  color:var(--text-nav-selected);
+}
 
-
+div.tree-item-inner:hover {
+  color:var(--text-nav-selected);
+}
 
 
 /* The name of the vault */
@@ -1087,23 +1094,6 @@ input[type="number"] {
 }
 
 
-/* --- the bottom gradient ---*/
-/*.popover.hover-popover:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--background-primary) 80%,
-    var(--background-primary)
-  );
-}
-*/
 /* =========== footnotes ========= */
 
 .markdown-preview-view .mod-highlighted {
@@ -1159,7 +1149,7 @@ blockquote a {
 blockquote:before {
   content: '“';
   position: relative;
-  left: 10px;
+  left: 0px;
   top: 0;
   color: var(--text-accent);
   font-size: 2em;
@@ -2027,15 +2017,10 @@ rect {
 
 
 
-/* Checked-task-is-not-line-through & style */
-
-.markdown-preview-view ul > li.task-list-item.is-checked {
-  text-decoration: none;
-  color: #8c8c8c;
-}
-
 /*
-
+==========================================================
+↓↓↓ IN-SETTINGS BUTTONS VIEW ↓↓↓
+==========================================================
 */
 
 button {
@@ -2051,30 +2036,134 @@ button {
   user-select: none;
 }
 
+
+/*
+===================================================================================
+↓↓↓ TASKLIST FORMATTING SECTION ↓↓↓
+===================================================================================
+*/
+
+/*
+-----------------------------------------------------------------------------------
+TASKLIST in Preview mode: how to make it not-line-through;
+-----------------------------------------------------------------------------------
+*/
+
+.markdown-preview-view ul > li.task-list-item.is-checked {
+  text-decoration: none;
+  color: #8c8c8c;
+}
+
+/*
+-----------------------------------------------------------------------------------
+TASKLIST in Preview mode: how to make the tasklist aligned to the left of the text;
+-----------------------------------------------------------------------------------
+*/
+
 .markdown-preview-view ul > li.task-list-item {
   list-style-type: none;
   list-style-image: none;
   list-style-position: outside;
   text-align: left;
-  margin-left: -2em;
+  margin-left: -1em;
 }
 
+/*
+-----------------------------------------------------------------------------------
+TASKLIST in Preview mode: set the size of "checked" and the text display parameters in the tasklist;
+-----------------------------------------------------------------------------------
+*/
 
+.markdown-preview-view > li.task-list-item {
+  display: inline-block;
+}
+
+/*initially there was pixel alignment, but it did not work well on monitors with different resolutions
 .markdown-preview-view .task-list-item-checkbox {
   width: 15px;
   height: 15px;
   position: relative;
   top: 3px;
   margin-right: 6px;
-  filter: hue-rotate(01deg);
 }
-.markdown-preview-view .task-list-item > ol {
-  display: inline-block;
+*/
+
+/* works fine on a Mac, but for some reason does not work well in Windows (for some reason, the checkbox sizes are several times larger)
+.markdown-preview-view .task-list-item-checkbox {
+  width: 2em;
+  height: 2em;
+  position: relative;
+  top: 0.5em;
+  left: -1em;
+  margin-right: -0.5em;
 }
-.markdown-preview-view .task-list-item > ol.contains-task-list {
-  display: block;
+*/
+
+.markdown-preview-view .task-list-item-checkbox {
+  position: relative;
+  top: 0.4em;
+  left: -12px;
+  margin-right: 0em;
 }
 
+/*
+-----------------------------------------------------------------------------------
+TASKLIST in Preview mode: change the color of the "checked" mark via hue-rotate filter;
+*the block has been added, since apparently in the current version of the application, by default such a filter with a different value is enabled for this block, and if the block is not added, the colors indicated in the blocks below are displayed incorrectly
+
+the base color used for the checklist looks like #3E93D8, is equivalent to HSL(207, 66%, 55%)
+- therefore, for a dark theme, we just need to cancel the current hue-rotate filter value, by input own value
+- for light theme we need to convert color HSL(207, 66%, 55%) to to HSL(2, 56%, 54%) (equal to RGB(207, 77, 73))
+
+This version works fine on Mac and Linux, but don't work on Win
+-----------------------------------------------------------------------------------
+*/
+
+.theme-dark .markdown-preview-view .task-list-item-checkbox {
+  filter: hue-rotate(360deg) brightness(120%) contrast(120%);
+}
+
+.theme-light .markdown-preview-view .task-list-item-checkbox {
+  content: '';
+  filter: hue-rotate(130deg) saturate(80%) brightness(90%) contrast(110%);
+}
+
+/*
+-----------------------------------------------------------------------------------
+WINDOWS WERSION
+
+TASKLIST in Preview mode: customization of the "checked" mark: drawing a block over the selected checklist
+(so as not to replace the block with a picture and customize the standard look of the block)
+- color;
+- mark symbol;
+
+This approach was used in the first version of the theme, but it showed two drawbacks:
+- when viewed on monitors with different resolutions, the sizes of the rendered block and the source block may not match
+- blocks are rendered differently in some browsers. So, in previous version of the theme (on obsidian version 0.10.3 and higher), a block of text-accent color was drawn:
+  - Windows: on top of a gray checklist block
+  - Mac: on top of a blue one (apparently, this is the default color for Mac)
+
+So now this version is only used for windows code
+-----------------------------------------------------------------------------------
+*/
+
+.mod-windows .markdown-preview-view .task-list-item-checkbox:checked::after {
+    pointer-events: auto;
+    content: '';
+    display: block;
+    position: relative;
+    background-color: #3e93d8;
+    width: 0.7vh;
+    height: 0.7vh;
+    margin: 0px;
+    border-radius: 0px;
+    transition: transform 0.15s ease-in-out, width 0.1s ease-in-out, left 0.1s ease-in-out, -webkit-transform 0.15s ease-in-out;
+    left: 0;
+    transform: translate3d(2px, 2px, 0);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  }
+
+/*
 .markdown-preview-view .task-list-item-checkbox:checked::after {
   pointer-events: auto;
   content: '';
@@ -2090,11 +2179,20 @@ button {
   transform: translate3d(2px, 2px, 0);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
 }
+*/
 
+/*
+==========================================================
+↓↓↓ MISSED COLORS ↓↓↓
+==========================================================
+*/
 
-/* changing color in menu and ctrl+p command bar */
 
 div.modal-content {
+  color: var(--text-faint);
+}
+
+div.modal-title {
   color: var(--text-faint);
 }
 
@@ -2109,5 +2207,4 @@ div.community-plugin-readme.markdown-preview-view {
 div.backlink-pane {
   color: #dcddde;
 }
-
 
