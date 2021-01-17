@@ -23,3 +23,8 @@
 - removed the disappearance of coloring of the line with the name of the active file when you hover over it with the mouse pointer (appeared in version 0.10.+)
 - pop-up page preview no longer disappears if the distance to the bottom of the page is less than the preview size, and does not affect the display of the current page
 - text colors and text highlighting in the tag bar and table of contents are now like in the navigation menu
+
+## v.0.10.5:
+
+- changed the way of rendering the completed checklists (the appearance has changed a little, but now they should be rendered the same on both Win and Mac devices, regardless of the screen resolution)
+- indents of lines in checklists in preview mode are now aligned (previously there was a shift of 1-2 characters between the first and next lines of text if the checklist item took more than one line), the indentation sizes are now attached not to pixels, but to units of characters
