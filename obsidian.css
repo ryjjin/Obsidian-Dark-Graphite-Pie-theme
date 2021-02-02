@@ -200,11 +200,11 @@ body {
 
 /* Background and text color of selected item in left nav tree / outline / tag pane */
 
-/*.nav-file.is-active > .nav-file-title, 
-.nav-file.is-active > .nav-folder-title, 
-.nav-file.is-active > .nav-folder-collapse-indicator, 
-.nav-folder.is-active > .nav-file-title, 
-.nav-folder.is-active > .nav-folder-title, 
+/*.nav-file.is-active > .nav-file-title,
+.nav-file.is-active > .nav-folder-title,
+.nav-file.is-active > .nav-folder-collapse-indicator,
+.nav-folder.is-active > .nav-file-title,
+.nav-folder.is-active > .nav-folder-title,
 .nav-folder.is-active > .nav-folder-collapse-indicator,
 .nav-file-title.is-inactive,
 .nav-file-title.is-active
@@ -215,11 +215,11 @@ body {
 }*/
 
 /* Background and text color of selected item in left nav tree - when hovering */
-/*.nav-file.is-active > .nav-file-title:hover, 
-.nav-file.is-active > .nav-folder-title:hover, 
-.nav-file.is-active > .nav-folder-collapse-indicator:hover, 
-.nav-folder.is-active > .nav-file-title:hover, 
-.nav-folder.is-active > .nav-folder-title:hover, 
+/*.nav-file.is-active > .nav-file-title:hover,
+.nav-file.is-active > .nav-folder-title:hover,
+.nav-file.is-active > .nav-folder-collapse-indicator:hover,
+.nav-folder.is-active > .nav-file-title:hover,
+.nav-folder.is-active > .nav-folder-title:hover,
 .nav-folder.is-active > .nav-folder-collapse-indicator:hover {
   background-color: var(--text-accent);
   color: var(--text-nav-selected);
@@ -247,6 +247,7 @@ div.collapsible-item-self.is-clickable:hover,
 div.tree-item-self.tag-pane-tag.is-clickable:hover,
 div.tree-item-self.is-clickable:hover,
 .suggestion-item.is-selected,
+div.suggestion-note.is-selected,
 body:not(.is-grabbing) .nav-file-title.is-active:hover {
   background-color:var(--background-nav-selected);
   color:var(--text-nav-selected);
@@ -268,7 +269,7 @@ div.tree-item-inner:hover {
 }
 
 /* Background and text color of hovered item in left nav tree */
-body:not(.is-grabbing) .nav-file-title:hover, 
+body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
   background-color: var(--background-secondary-alt);
   color: var(--text-nav-selected);
@@ -288,7 +289,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 
 /* Left Nav menu item - hover background color of the collapse/expand arrow */
-body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator, 
+body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator,
 body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
   background-color: var(--background-nav-alt);
 }
@@ -309,11 +310,11 @@ body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
 }
 
 .vertical-tabs-container {
-  color: var(--text-muted); 
+  color: var(--text-muted);
 }
 
 div.setting-item-name {
-  color: var(--text-faint); 
+  color: var(--text-faint);
 }
 
 
@@ -575,7 +576,7 @@ ul ul::before {
 /*-------search pane---------*/
 input[type="text"],
 input[type="email"],
-input[type="password"], 
+input[type="password"],
 input[type="number"] {
   font-family: Source Code Pro, monospace;
   padding: 5px 8px;
@@ -679,7 +680,7 @@ input[type="number"] {
   top: 0px;
 }
 .view-header {
-  height: 29px; 
+  height: 29px;
   display: flex;
   border-top: 1px solid var(--background-secondary-alt);
   border-bottom: 2px solid var(--background-secondary-alt);
@@ -996,7 +997,7 @@ input[type="number"] {
   width: 13px;
   height: 9px;
   border-radius: 20%;
-  border-left: 4px solid var(--text-accent2);   
+  border-left: 4px solid var(--text-accent2);
   cursor: pointer;
   top: -2px;
 }
@@ -1261,8 +1262,8 @@ body.is-translucent {
 .is-translucent .workspace-ribbon { opacity: 1; }
 .is-translucent .workspace-tabs { opacity: 0.6; }
 .is-translucent .status-bar {
-   opacity: 1; 
-   border-top: 0px solid var(--background-secondary-alt); 
+   opacity: 1;
+   border-top: 0px solid var(--background-secondary-alt);
    margin: 0px 0px; }
 
 /*=============== add mods below ================*/
@@ -2207,4 +2208,3 @@ div.community-plugin-readme.markdown-preview-view {
 div.backlink-pane {
   color: #dcddde;
 }
-
