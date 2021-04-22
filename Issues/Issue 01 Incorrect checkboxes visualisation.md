@@ -81,6 +81,5 @@ Source: [Incorrect checkboxes visualisation](https://github.com/ryjjin/Obsidian-
 
 ![[Checkbox Publish Safari iOS.png|400]]
 
-
 ## Решение
 
