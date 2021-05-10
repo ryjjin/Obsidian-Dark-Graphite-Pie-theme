@@ -476,6 +476,10 @@ ul ul::before {
   border-left-color: var(--background-secondary-alt);
 }
 
+.side-dock-ribbon.mod-right {
+  flex: 0 0 0;
+}
+
 /* ===== thinner & snappier horiz resize handle =========*/
 
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
