@@ -357,9 +357,24 @@ div.setting-item-name {
   background-color: red;
 }
 
+.tag[href^="#стартовал_проект"] {
+  background-color: green;
+}
+
+.tag[href^="#высокий_шанс"] {
+  background-color: green;
+}
 
 .tag[href^="#complete"] {
   background-color: green;
+}
+
+.tag[href^="#идет_конкурс"] {
+  background-color: orange;
+}
+
+.tag[href^="#средний_шанс"] {
+  background-color: orange;
 }
 
 .tag[href^="#inprogress"] {
@@ -1126,7 +1141,7 @@ blockquote {
   border: none;
   border-left: 2px solid var(--text-accent);
   color: #8c8c8c;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-style: normal;
   padding: 24px 16px 12px;
   margin: 24px 0 36px;
@@ -1327,7 +1342,7 @@ TASKLIST in Preview mode: set the size of "checked" and the text display paramet
 -----------------------------------------------------------------------------------
 */
 
-.markdown-preview-viewli.task-list-item {
+.markdown-preview-view li.task-list-item {
   display: block;
 }
 
