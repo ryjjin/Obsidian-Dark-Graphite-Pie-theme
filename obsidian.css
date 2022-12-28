@@ -864,7 +864,7 @@ body {
         color:var(--text-nav-selected);
     }
 
-    div.sidebar-toggle-button {
+    div.sidebar-toggle-button, .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
       background-color:var(--background-nav);
       color:var(--text-nav);
     }
