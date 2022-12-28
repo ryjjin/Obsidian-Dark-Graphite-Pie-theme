@@ -351,6 +351,14 @@ body {
         background-color: gray;
       }
 
+      .tag[href^="#проект_не_состоялся"] {
+        background-color: gray;
+      }
+
+      .tag[href^="#failed"], .tag[href^="#проигран_конкурс"] {
+        background-color: red;
+      }
+
     /* ------- #### Live Preview --------------*/
 
 
