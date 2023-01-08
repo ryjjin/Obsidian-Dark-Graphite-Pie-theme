@@ -125,6 +125,7 @@ body {
   --graphtag: #5dbcd2;
   --graph-attach: #d669bc;
   --graph-unresolved: #9e8aff;
+  --checklist-done-decoration: none;
 }
 
 .theme-light {
@@ -178,6 +179,7 @@ body {
   --graphtag: #b9ec41;
   --graph-attach: #83D4F4;
   --graph-unresolved: rgb(143, 147, 143);
+  --checklist-done-decoration: none;
 }
 
 
@@ -439,7 +441,10 @@ body {
       filter: hue-rotate(130deg) saturate(80%) brightness(90%) contrast(110%);
     }
     
-
+    
+  
+  
+  
   /* ======= ### Quotes ==============*/
 
 
@@ -982,5 +987,4 @@ body {
   background: var(--background-primary-alt);
   line-height: 1.6em;
 }
-
 
