@@ -28,3 +28,8 @@
 
 - changed the way of rendering the completed checklists (the appearance has changed a little, but now they should be rendered the same on both Win and Mac devices, regardless of the screen resolution)
 - indents of lines in checklists in preview mode are now aligned (previously there was a shift of 1-2 characters between the first and next lines of text if the checklist item took more than one line), the indentation sizes are now attached not to pixels, but to units of characters
+
+## v.1.2.0
+
+- bug fixes, adaptation to 1.x versions of Obsidian
+- change of Quotes and Code block
