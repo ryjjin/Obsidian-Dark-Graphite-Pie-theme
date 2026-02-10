@@ -345,6 +345,10 @@ body {
         background-color: #4d3ca6;
       }
 
+	  .tag[href^="#RMDB"] {
+        background-color: #4d3ca6;
+      }
+
       .tag[href^="#TIER1"] {
         background-color: red;
       }
