@@ -393,15 +393,11 @@ body {
         background-color: gray;
       }
 
-      ..tag[href^="#Риск-координатор"] {
+      .tag[href^="#Риск-координатор"] {
         background-color: orange;
       }
 
-      ..tag[href^="#Дорожная_карта_2025"] {
-        background-color: rgb(216, 0, 0);
-      }
-
-      .tag[href^="#Дорожная_карта_2026"] {
+      .tag[href^="#Дорожная_карта"] {
         background-color: rgb(216, 0, 0);
       }
 
